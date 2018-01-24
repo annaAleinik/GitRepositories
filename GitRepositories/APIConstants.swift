@@ -11,5 +11,8 @@ import Foundation
 //Example of api link for list of repositories
 //<https://api.github.com/repositories?since=364>; rel="next"
 
-let baseURL = "https://api.github.com"
-let allRepositoriesURL = "/repositories"
+struct APIConstants {
+   static let baseURL = "https://api.github.com"
+   static let allRepositoriesURL = "/repositories"
+}
+
