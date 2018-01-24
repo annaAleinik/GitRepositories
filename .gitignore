@@ -69,7 +69,7 @@ fastlane/test_output
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
-RepositoryTest/Carthage/Checkouts
+Carthage/Checkouts
 
-RepositoryTest/Carthage/Build
-RepositoryTest/Build
+Carthage/Build
+Build

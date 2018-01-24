@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7822DCE1201917AB00F2E2B0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7822DCE0201917AB00F2E2B0 /* Alamofire.framework */; };
+		7822DCE32019181900F2E2B0 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7822DCE22019181900F2E2B0 /* APIConstants.swift */; };
+		7822DCE52019189F00F2E2B0 /* GRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7822DCE42019189F00F2E2B0 /* GRNetworkManager.swift */; };
 		782AF5C02019135B00136297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782AF5BF2019135B00136297 /* AppDelegate.swift */; };
 		782AF5C22019135B00136297 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782AF5C12019135B00136297 /* ViewController.swift */; };
 		782AF5C52019135B00136297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782AF5C32019135B00136297 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7822DCE0201917AB00F2E2B0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		7822DCE22019181900F2E2B0 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		7822DCE42019189F00F2E2B0 /* GRNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GRNetworkManager.swift; sourceTree = "<group>"; };
 		782AF5BC2019135B00136297 /* GitRepositories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitRepositories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		782AF5BF2019135B00136297 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		782AF5C12019135B00136297 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7822DCE1201917AB00F2E2B0 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7822DCDF201917AB00F2E2B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7822DCE0201917AB00F2E2B0 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		782AF5B32019135B00136297 = {
 			isa = PBXGroup;
 			children = (
 				782AF5BE2019135B00136297 /* GitRepositories */,
 				782AF5BD2019135B00136297 /* Products */,
+				7822DCDF201917AB00F2E2B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +72,8 @@
 			children = (
 				782AF5BF2019135B00136297 /* AppDelegate.swift */,
 				782AF5C12019135B00136297 /* ViewController.swift */,
+				7822DCE22019181900F2E2B0 /* APIConstants.swift */,
+				7822DCE42019189F00F2E2B0 /* GRNetworkManager.swift */,
 				782AF5C32019135B00136297 /* Main.storyboard */,
 				782AF5C62019135B00136297 /* Assets.xcassets */,
 				782AF5C82019135B00136297 /* LaunchScreen.storyboard */,
@@ -138,6 +156,8 @@
 			files = (
 				782AF5C22019135B00136297 /* ViewController.swift in Sources */,
 				782AF5C02019135B00136297 /* AppDelegate.swift in Sources */,
+				7822DCE32019181900F2E2B0 /* APIConstants.swift in Sources */,
+				7822DCE52019189F00F2E2B0 /* GRNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +280,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitRepositories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AA.GitRepositories;
@@ -272,6 +296,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitRepositories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AA.GitRepositories;
@@ -299,6 +327,7 @@
 				782AF5D02019135B00136297 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
