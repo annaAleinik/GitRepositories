@@ -15,7 +15,26 @@
 		782AF5C52019135B00136297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782AF5C32019135B00136297 /* Main.storyboard */; };
 		782AF5C72019135B00136297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 782AF5C62019135B00136297 /* Assets.xcassets */; };
 		782AF5CA2019135B00136297 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782AF5C82019135B00136297 /* LaunchScreen.storyboard */; };
+		78312508201A08B800EE8554 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7822DCE0201917AB00F2E2B0 /* Alamofire.framework */; };
+		78312509201A08B800EE8554 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7822DCE0201917AB00F2E2B0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7831250C201A0B5400EE8554 /* RepositoryesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7831250B201A0B5400EE8554 /* RepositoryesModel.swift */; };
+		7831250E201A0E2900EE8554 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7831250D201A0E2900EE8554 /* RepositoryModel.swift */; };
+		7848EFB4201B431000A4F12B /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7848EFB3201B431000A4F12B /* Cell.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7831250A201A08B800EE8554 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				78312509201A08B800EE8554 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7822DCE0201917AB00F2E2B0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -28,6 +47,9 @@
 		782AF5C62019135B00136297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		782AF5C92019135B00136297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		782AF5CB2019135B00136297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7831250B201A0B5400EE8554 /* RepositoryesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryesModel.swift; sourceTree = "<group>"; };
+		7831250D201A0E2900EE8554 /* RepositoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		7848EFB3201B431000A4F12B /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7822DCE1201917AB00F2E2B0 /* Alamofire.framework in Frameworks */,
+				78312508201A08B800EE8554 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,16 +93,27 @@
 		782AF5BE2019135B00136297 /* GitRepositories */ = {
 			isa = PBXGroup;
 			children = (
-				782AF5BF2019135B00136297 /* AppDelegate.swift */,
-				782AF5C12019135B00136297 /* ViewController.swift */,
 				7822DCE22019181900F2E2B0 /* APIConstants.swift */,
 				7822DCE42019189F00F2E2B0 /* GRNetworkManager.swift */,
+				782AF5BF2019135B00136297 /* AppDelegate.swift */,
+				7848EFB3201B431000A4F12B /* Cell.xib */,
+				782AF5C12019135B00136297 /* ViewController.swift */,
+				7831250F201A0E6D00EE8554 /* Models */,
 				782AF5C32019135B00136297 /* Main.storyboard */,
 				782AF5C62019135B00136297 /* Assets.xcassets */,
 				782AF5C82019135B00136297 /* LaunchScreen.storyboard */,
 				782AF5CB2019135B00136297 /* Info.plist */,
 			);
 			path = GitRepositories;
+			sourceTree = "<group>";
+		};
+		7831250F201A0E6D00EE8554 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7831250D201A0E2900EE8554 /* RepositoryModel.swift */,
+				7831250B201A0B5400EE8554 /* RepositoryesModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,6 +126,7 @@
 				782AF5B82019135B00136297 /* Sources */,
 				782AF5B92019135B00136297 /* Frameworks */,
 				782AF5BA2019135B00136297 /* Resources */,
+				7831250A201A08B800EE8554 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				782AF5CA2019135B00136297 /* LaunchScreen.storyboard in Resources */,
+				7848EFB4201B431000A4F12B /* Cell.xib in Resources */,
 				782AF5C72019135B00136297 /* Assets.xcassets in Resources */,
 				782AF5C52019135B00136297 /* Main.storyboard in Resources */,
 			);
@@ -157,7 +193,9 @@
 				782AF5C22019135B00136297 /* ViewController.swift in Sources */,
 				782AF5C02019135B00136297 /* AppDelegate.swift in Sources */,
 				7822DCE32019181900F2E2B0 /* APIConstants.swift in Sources */,
+				7831250E201A0E2900EE8554 /* RepositoryModel.swift in Sources */,
 				7822DCE52019189F00F2E2B0 /* GRNetworkManager.swift in Sources */,
+				7831250C201A0B5400EE8554 /* RepositoryesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
