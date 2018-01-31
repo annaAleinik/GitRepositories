@@ -9,23 +9,17 @@
 import Foundation
 import Alamofire
 
-
-
 class RepositoryModel {
 
     var login   : String?
     var id      : Int?
     var url     : String?
-    
-    
-    
-    init(json : AnyObject) {
+	
+    init(json : Any) {
         if let dict = json as? NSDictionary {
             self.login  = dict.value(forKey: "login") as? String
             self.id     = dict.value(forKey: "id") as? Int
             self.url    = dict.value(forKey: "url") as? String
-        
-            
         }
      
      }
