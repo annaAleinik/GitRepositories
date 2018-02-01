@@ -10,19 +10,18 @@ import Foundation
 import Alamofire
 
 class NetworkManager {
-
-    func getRepositories() {
+    
+    func getRepositories(completion: @escaping (_ repos: [RepositoryModel]) -> Void) {
         
-         let finishURLString = APIConstants.baseURL .appending(APIConstants.allRepositoriesURL)
+        let finishURLString = APIConstants.baseURL .appending(APIConstants.allRepositoriesURL)
         let url = URL(string: finishURLString)
         
-        
         let session = URLSession.shared
-    
+        
         session.dataTask(with: url!) { (data, response, error) in
             if let response = response {
-            print(response)
-        }
+                print(response)
+            }
             
             guard let data = data else {return}
             print(data)
@@ -30,11 +29,15 @@ class NetworkManager {
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 print(json)
+                let modelrepo = RepositoryesModel.init(json: json)
+                completion(modelrepo.repositoryes)
+                
                 
             } catch {
                 print(error)
             }
             
-        }.resume()
+            }.resume()
+        
     }
 }
