@@ -11,7 +11,6 @@
 		7822DCE32019181900F2E2B0 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7822DCE22019181900F2E2B0 /* APIConstants.swift */; };
 		7822DCE52019189F00F2E2B0 /* GRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7822DCE42019189F00F2E2B0 /* GRNetworkManager.swift */; };
 		782AF5C02019135B00136297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782AF5BF2019135B00136297 /* AppDelegate.swift */; };
-		782AF5C22019135B00136297 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782AF5C12019135B00136297 /* ViewController.swift */; };
 		782AF5C52019135B00136297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782AF5C32019135B00136297 /* Main.storyboard */; };
 		782AF5C72019135B00136297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 782AF5C62019135B00136297 /* Assets.xcassets */; };
 		782AF5CA2019135B00136297 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782AF5C82019135B00136297 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,8 @@
 		78312509201A08B800EE8554 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7822DCE0201917AB00F2E2B0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7831250C201A0B5400EE8554 /* RepositoryesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7831250B201A0B5400EE8554 /* RepositoryesModel.swift */; };
 		7831250E201A0E2900EE8554 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7831250D201A0E2900EE8554 /* RepositoryModel.swift */; };
+		783D559C202356F500C034FF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D559B202356F500C034FF /* TableViewCell.swift */; };
+		783D559E2023585200C034FF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D559D2023585200C034FF /* TableViewController.swift */; };
 		7848EFB4201B431000A4F12B /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7848EFB3201B431000A4F12B /* Cell.xib */; };
 /* End PBXBuildFile section */
 
@@ -42,13 +43,14 @@
 		7822DCE42019189F00F2E2B0 /* GRNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GRNetworkManager.swift; sourceTree = "<group>"; };
 		782AF5BC2019135B00136297 /* GitRepositories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitRepositories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		782AF5BF2019135B00136297 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		782AF5C12019135B00136297 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		782AF5C42019135B00136297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		782AF5C62019135B00136297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		782AF5C92019135B00136297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		782AF5CB2019135B00136297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7831250B201A0B5400EE8554 /* RepositoryesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryesModel.swift; sourceTree = "<group>"; };
 		7831250D201A0E2900EE8554 /* RepositoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		783D559B202356F500C034FF /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		783D559D2023585200C034FF /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7848EFB3201B431000A4F12B /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,10 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				7822DCE22019181900F2E2B0 /* APIConstants.swift */,
-				7822DCE42019189F00F2E2B0 /* GRNetworkManager.swift */,
 				782AF5BF2019135B00136297 /* AppDelegate.swift */,
-				7848EFB3201B431000A4F12B /* Cell.xib */,
-				782AF5C12019135B00136297 /* ViewController.swift */,
+				7822DCE42019189F00F2E2B0 /* GRNetworkManager.swift */,
+				788991F020248836002E4C7B /* UI */,
 				7831250F201A0E6D00EE8554 /* Models */,
 				782AF5C32019135B00136297 /* Main.storyboard */,
 				782AF5C62019135B00136297 /* Assets.xcassets */,
@@ -114,6 +115,16 @@
 				7831250B201A0B5400EE8554 /* RepositoryesModel.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		788991F020248836002E4C7B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7848EFB3201B431000A4F12B /* Cell.xib */,
+				783D559B202356F500C034FF /* TableViewCell.swift */,
+				783D559D2023585200C034FF /* TableViewController.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				782AF5C22019135B00136297 /* ViewController.swift in Sources */,
+				783D559C202356F500C034FF /* TableViewCell.swift in Sources */,
+				783D559E2023585200C034FF /* TableViewController.swift in Sources */,
 				782AF5C02019135B00136297 /* AppDelegate.swift in Sources */,
 				7822DCE32019181900F2E2B0 /* APIConstants.swift in Sources */,
 				7831250E201A0E2900EE8554 /* RepositoryModel.swift in Sources */,
