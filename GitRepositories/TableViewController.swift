@@ -8,7 +8,19 @@
 
 import UIKit
 
+
 class TableViewController: UITableViewController {
+    
+    var arrayRepoModel : [RepositoryModel]? = []
+    
+    
+    func loadData() {
+        NetworkManager.networkManager.getRepositories { (models) in
+            self.arrayRepoModel = models
+            self.tableView.reloadData()
+            
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -16,34 +28,59 @@ class TableViewController: UITableViewController {
         
         tableView.register(UINib(nibName: "Cell", bundle: nil), forCellReuseIdentifier: "customCell")
         
-        
     }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.loadData()
+    }
     
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        
+        return self.arrayRepoModel!.count
+    }
+    // ызываю функ ячейки и арей по индексу обекты передаю в качестве параметра
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier:"customCell", for: indexPath) as? RepositoryTableViewCell
+        if cell != nil {
+            cell?.configWithModel(model: (arrayRepoModel?[indexPath.row])!)
+        }
+
+        return cell!
     }
     
-    //
-    //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //      let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-    //
-    //      let cell = tableView.dequeueReusableCell(withIdentifier: "DefaultCell")!
-    //
-    //        return cell
-    //    }
+
+    //MARK: -- For paginaton
+    //MARK: -- UIScrollViewDelegate 
+    
+    override func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     /*
@@ -90,5 +127,8 @@ class TableViewController: UITableViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    
+    
+    
     
 }

@@ -12,6 +12,7 @@ class RepositoryesModel {
 
  var repositoryes = [RepositoryModel]() //array with objects each of which is a model of one repositori
 
+
 init (json: Any) {
 	//check json is it Array
 	if let repositoryArray = json as? Array<Any> {

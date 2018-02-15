@@ -15,5 +15,6 @@ import Foundation
     struct APIConstants {
         static let baseURL = "https://api.github.com"
         static let allRepositoriesURL = "/repositories"
-    }
+        static let per_page = "&per_page=2"
+}
 

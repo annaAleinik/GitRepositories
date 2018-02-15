@@ -18,7 +18,7 @@
 		78312509201A08B800EE8554 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7822DCE0201917AB00F2E2B0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7831250C201A0B5400EE8554 /* RepositoryesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7831250B201A0B5400EE8554 /* RepositoryesModel.swift */; };
 		7831250E201A0E2900EE8554 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7831250D201A0E2900EE8554 /* RepositoryModel.swift */; };
-		783D559C202356F500C034FF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D559B202356F500C034FF /* TableViewCell.swift */; };
+		783D559C202356F500C034FF /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D559B202356F500C034FF /* RepositoryTableViewCell.swift */; };
 		783D559E2023585200C034FF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D559D2023585200C034FF /* TableViewController.swift */; };
 		7848EFB4201B431000A4F12B /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7848EFB3201B431000A4F12B /* Cell.xib */; };
 /* End PBXBuildFile section */
@@ -49,7 +49,7 @@
 		782AF5CB2019135B00136297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7831250B201A0B5400EE8554 /* RepositoryesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryesModel.swift; sourceTree = "<group>"; };
 		7831250D201A0E2900EE8554 /* RepositoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
-		783D559B202356F500C034FF /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		783D559B202356F500C034FF /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		783D559D2023585200C034FF /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7848EFB3201B431000A4F12B /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				7848EFB3201B431000A4F12B /* Cell.xib */,
-				783D559B202356F500C034FF /* TableViewCell.swift */,
+				783D559B202356F500C034FF /* RepositoryTableViewCell.swift */,
 				783D559D2023585200C034FF /* TableViewController.swift */,
 			);
 			name = UI;
@@ -201,7 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				783D559C202356F500C034FF /* TableViewCell.swift in Sources */,
+				783D559C202356F500C034FF /* RepositoryTableViewCell.swift in Sources */,
 				783D559E2023585200C034FF /* TableViewController.swift in Sources */,
 				782AF5C02019135B00136297 /* AppDelegate.swift in Sources */,
 				7822DCE32019181900F2E2B0 /* APIConstants.swift in Sources */,

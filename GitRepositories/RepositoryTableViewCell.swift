@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  RepositoryTableViewCell.swift
 //  GitRepositories
 //
 //  Created by Анюта on 01.02.18.
@@ -8,22 +8,36 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
-
+class RepositoryTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var loginLable: UILabel!
     @IBOutlet weak var idLable: UILabel!
-    @IBOutlet weak var nameLable: UILabel!
-    
+    @IBOutlet weak var urlLable: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
     }
-
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
+    func configWithModel(model: RepositoryModel) {
+        loginLable.text = model.login
+        idLable.text = model.id
+        urlLable.text = model.url
+        
+        
+    }
+    
 }
+
+
+
+
+
+
+
+

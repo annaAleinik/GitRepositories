@@ -11,9 +11,11 @@ import Alamofire
 
 class NetworkManager {
     
+    static let networkManager = NetworkManager()
+    
     func getRepositories(completion: @escaping (_ repos: [RepositoryModel]) -> Void) {
         
-        let finishURLString = APIConstants.baseURL .appending(APIConstants.allRepositoriesURL)
+        let finishURLString = APIConstants.baseURL .appending(APIConstants.allRepositoriesURL)        
         let url = URL(string: finishURLString)
         
         let session = URLSession.shared
